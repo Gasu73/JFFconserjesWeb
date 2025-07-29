@@ -1,0 +1,107 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+/* Colores */
+:root {
+  --color-fondo: #2b3a51;
+  --color-borde: #fcba03;
+  --color-texto: #ffffff;
+  --color-placeholder: #b4b3b5;
+  --color-boton: #007e70;
+  --color-boton-hover: #00685d;
+  --color-boton-texto: #ffffff;
+  --color-error: #f63939;
+}
+
+/* Reset y base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-fondo);
+  font-family: 'Poppins', sans-serif;
+  color: var(--color-texto);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.login-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 400px;
+  gap: 20px;
+}
+
+/* Logo */
+.logo {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 90px;
+}
+
+/* Cards (simulan los cardViews) */
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+
+.card input {
+  background: transparent;
+  border: none;
+  width: 100%;
+  padding: 12px 0;
+  font-size: 1rem;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+}
+
+.card input::placeholder {
+  color: var(--color-placeholder);
+}
+
+/* Botón */
+button[type="submit"] {
+  background-color: var(--color-boton);
+  border: none;
+  border-radius: 10px;
+  color: var(--color-boton-texto);
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.8rem 2rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--color-boton-hover);
+}
+
+/* Error */
+.error-message {
+  color: var(--color-error);
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .login-layout {
+    padding: 1rem;
+  }
+}
